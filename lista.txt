@@ -2,3 +2,5 @@ Lista de colores:
 - Rojo
 - Blanco
 - Rosa
+- Celeste
+- Naranja
