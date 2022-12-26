@@ -1,0 +1,74 @@
+.profile{ 
+    /*Esto es una clase*/
+    border-radius: 100%;
+    border: 3px solid #8d44adb2;
+    margin-left: 175px; /*No se como alinear al centro la imagen*/
+    margin-top: 20px;
+}
+
+.resalto{
+    color: darkblue;
+    font-style: italic;
+    font-family: Arial;
+}
+
+#box{
+    /*Esto es un id*/
+    background-color: #c39bd377 ;
+    width: 600px;
+    height: 350px;
+    margin: auto;
+}
+
+/*Esto son etiquetas html como selectores*/
+h1{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+
+h2{
+    text-align: center;
+    font-family:Times;
+}
+
+h3{
+    color: #8E44AD;
+    font-family: 'Segoe UI';
+    font-size: 22px;
+    font-style: bold;
+}
+
+p{
+    font-family: 'Segoe UI';
+    text-align: justify;
+}
+
+ul{
+    list-style:square;
+    font-family: 'Segoe UI';
+}
+
+ol{
+    list-style:lower-alpha;
+    list-style-position: inside;
+    font-family: 'Segoe UI';
+}
+
+body{
+    background-color: #a3e4d79f;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+a{
+    color: #FFBD33;
+    font-style: italic;
+}
+
+a:hover{
+    color: violet;
+}
