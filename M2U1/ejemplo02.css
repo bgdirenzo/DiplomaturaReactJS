@@ -1,0 +1,18 @@
+/*
+font-family: 'Andika', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+.texto{
+    background-color: yellow;
+    column-count: 3;
+    column-gap: 20px;
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-family: 'Andika', sans-serif;
+}

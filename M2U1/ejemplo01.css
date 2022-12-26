@@ -1,0 +1,12 @@
+.caja {
+    width: 400px;
+    height: 400px;
+    background: #f100ff;
+    background: linear-gradient(44deg, #f100ff 30%, #a311a9 70%);
+    background: -webkit-linear-gradient(44deg, #f100ff 30%, #a311a9 70%);
+    background: -moz-linear-gradient(44deg, #f100ff 30%, #a311a9 70%);
+    box-shadow: 10px 20px 5px darkblue; /*eje x - eje y - blur - color*/
+    border-radius: 30px;
+    border: 20px double white;
+    padding: 30px;
+}
