@@ -1,0 +1,41 @@
+.box {
+    background: rgba(0, 255, 246, 0.48);
+    background: linear-gradient(180deg, rgba(0, 255, 246, 0.48) 20%, rgba(153, 236, 232, 0.45) 80%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 255, 246, 0.48) 20%, rgba(153, 236, 232, 0.45) 80%);
+    background: -moz-linear-gradient(180deg, rgba(0, 255, 246, 0.48) 20%, rgba(153, 236, 232, 0.45) 80%);
+}
+
+.perfil {
+    border-radius: 200px 200px 200px 10px;
+    border: 7px solid cadetblue;
+    margin-left: 200px;
+}
+
+.icons {
+    color: blueviolet;
+    font-size: 16px;
+}
+
+body {
+    column-count: 2;
+    column-gap: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+    font-family: 'Andika', sans-serif;
+}
+
+a {
+    color: orangered;
+}
+
+a:hover {
+    color: blueviolet;
+}
