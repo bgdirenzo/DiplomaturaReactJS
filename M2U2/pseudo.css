@@ -1,0 +1,24 @@
+/*div {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}*/
+
+div:last-child {
+    /*Esto es una pseudo-clase*/
+    background-color: #F89B4D;
+    margin-left: 0;
+}
+
+span {
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+span::after {
+    /*Esto e sun pseudo-elemento*/
+    content: 'despues';
+    background-color: red;
+}
