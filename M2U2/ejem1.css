@@ -5,7 +5,7 @@
 	display: inline-flex;
     flex-direction: row; /*elementos en una sola linea -- en este caso es fila -- options: column/row-reverse/column-reverse*/
     flex-wrap: wrap; /*elementos multilinea -- options: nowrap/wrap-reverse*/
-    justify-content: space-around; /*se puede alinear el contenido en una sola linea -- options: flex-start;/flex-end;/center;/space-around;/space-evenly;*/
+    justify-content: space-between; /*se puede alinear el contenido en una sola linea -- options: flex-start;/flex-end;/center;/space-around;/space-evenly;*/
     align-content: flex-start; /*alineacion multilinea -- options: flex-end;/center/stretch/space-around/space-between*/
     /*align-items: baseline; alineacion en el eje secundario*/
 }
