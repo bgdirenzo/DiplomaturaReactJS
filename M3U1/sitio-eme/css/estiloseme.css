@@ -1,0 +1,115 @@
+/* font-family: 'Montserrat', sans-serif; */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+nav {
+    background-color: #19496D;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    flex-grow: 1;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #005CA0;
+}
+
+nav ul li a.activo {
+    background-color: #005CA0;
+}
+
+footer {
+    text-align: center;
+    clear: both;  /*preguntar que hacía*/
+    color: #444;
+    font-size: 10px;
+}
+
+.holder {
+    max-width: 960px;
+    /*Esto es para resoluciones de 1024*/
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+/* Index */
+
+.logo {
+    text-align: center;
+}
+
+.bienvenidos {
+    width: 85%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.bienvenidos p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Fin Index */
+
+/* Servicios */
+
+.contenedor{
+    height: 475px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.caja {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    background-color: #ccc;
+    background-image: url(https://i0.wp.com/teinco.edu.co/wp-content/uploads/2022/09/CONTADURIA_1-80.jpg?fit=591%2C401&ssl=1);
+	width: 200px;
+	height: 200px;
+	margin: 0px;
+	font-size: 10px;
+    text-align: center;
+}
+
+.item h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.item p {
+    font-size: 12px;
+}
+
+/* Fin Servicios */
