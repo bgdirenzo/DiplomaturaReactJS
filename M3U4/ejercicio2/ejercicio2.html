@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <!-- <script src="ejercicio2.js"></script> -->
+</head>
+
+<body>
+    <div>
+        <label for="caracteres">Mensaje:</label>
+        <textarea id="caracteres"></textarea>
+        <p>Caracteres ingresados: <span id="cant-caract"></span></p>
+    </div>
+
+    <script>
+        const caract = document.getElementById('caracteres');
+        const cantidad = document.getElementById('cant-caract');
+
+        caract.addEventListener("input", function(){
+            const cant = caract.value.length;
+            cantidad.textContent = cant;
+        });
+    </script>
+</body>
+
+</html>

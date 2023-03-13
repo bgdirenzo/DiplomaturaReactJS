@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio1.css">
+    <title>Ejercicico 1</title>
+    <!-- <script type="text/javascript" src="ejercicio1.js"></script> -->
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="item" id="rojo"></div>
+        <div class="item" id="verde"></div>
+        <div class="item" id="azul"></div>
+    </div>
+
+    <script>
+        const items = document.getElementsByClassName('item');
+        const rojo = document.querySelector('#rojo');
+        rojo.addEventListener('click', function () {
+            document.body.style.backgroundColor = "red";
+        });
+
+        const verde = document.querySelector('#verde');
+        verde.addEventListener('click', function () {
+            document.body.style.backgroundColor = "green";
+        });
+
+        const azul = document.querySelector('#azul');
+        azul.addEventListener('click', function () {
+            document.body.style.backgroundColor = "blue";
+        });
+    </script>
+</body>
+
+</html>
