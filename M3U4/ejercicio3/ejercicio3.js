@@ -28,4 +28,6 @@ var alumnos = [
 ];
 
 var aprobados = alumnos.filter(ap => ap.nota >= 7);
-console.log(aprobados);
+for (let i=0; i<aprobados.length; i++){
+    document.write(aprobados[i].nombre + "<br>");
+}

@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <p>Alumnos aprobados en consola</p>
+    <h3>Los alumnos aprobados son:</h3>
+    <!-- <div id="alumno-aprobado"></div> -->
     <script>
         var alumnos = [
             {
@@ -42,7 +43,9 @@
         ];
 
         var aprobados = alumnos.filter(ap => ap.nota >= 7);
-        console.log(aprobados);
+        for (let i=0; i<aprobados.length; i++){
+            document.write(aprobados[i].nombre + "<br>");
+        }
     </script>
 </body>
 
