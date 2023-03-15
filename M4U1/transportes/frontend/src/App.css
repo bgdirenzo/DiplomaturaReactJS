@@ -1,5 +1,22 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.holder {
+  max-width: 960px;
+  /*Esto es para resoluciones de 1024*/
+  margin: 0 auto;
+}
+
+h2 {
+  color: #2e64a1;
+  font-weight: 400;
 }
 
 .App-logo {
@@ -13,7 +30,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +39,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
