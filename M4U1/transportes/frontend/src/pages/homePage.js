@@ -1,6 +1,6 @@
 import React from "react";
 
-const homePage = (props) => {
+const HomePage = (props) => {
     return (
         <main className="holder">
             <div className="homeimg">
@@ -24,4 +24,4 @@ const homePage = (props) => {
     );
 }
 
-export default homePage;
+export default HomePage;

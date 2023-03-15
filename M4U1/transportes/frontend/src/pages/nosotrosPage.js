@@ -1,6 +1,6 @@
 import React from "react";
 
-const nosotrosPage = (props) => {
+const NosotrosPage = (props) => {
     return (
         <main className="holder">
             <div className="historia">
@@ -23,4 +23,4 @@ const nosotrosPage = (props) => {
     );
 }
 
-export default nosotrosPage;
+export default NosotrosPage;

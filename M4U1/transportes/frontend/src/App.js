@@ -1,18 +1,17 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import React from 'react';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/layout/Header';
 import Nav from './components/layout/Nav';
 import Footer from './components/layout/Footer';
 
-import contactoPage from './pages/contactoPage';
-import homePage from './pages/homePage';
-import nosotrosPage from './pages/nosotrosPage';
-import novedadesPage from './pages/novedadesPage';
+import ContactoPage from './pages/ContactoPage';
+import HomePage from './pages/HomePage';
+import NosotrosPage from './pages/NosotrosPage';
+import NovedadesPage from './pages/NovedadesPage';
 
 function App() {
   return (
@@ -21,10 +20,10 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/" element={<homePage />} />
-          <Route path="nosotros" element={<nosotrosPage />} />
-          <Route path="novedades" element={<novedadesPage />} />
-          <Route path="contacto" element={<contactoPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/nosotros" element={<NosotrosPage />} />
+          <Route path="/novedades" element={<NovedadesPage />} />
+          <Route path="/contacto" element={<ContactoPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />
