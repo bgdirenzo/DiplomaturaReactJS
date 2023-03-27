@@ -1,12 +1,5 @@
 // import logo from './logo.svg';
 import './App.css';
-import './styles/components/layout/header.css';
-import './styles/components/layout/nav.css';
-import './styles/components/layout/footer.css';
-import './styles/components/pages/homePage.css';
-import './styles/components/pages/nosotrosPage.css';
-import './styles/components/pages/novedadesPage.css';
-import './styles/components/pages/contactoPage.css';
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
