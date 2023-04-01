@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+{{#if conocido}}
+    <p>Hola {{nombre}} <a href="/salir">Salir</a></p>   
+    {{!-- A traves del get va a realizarse el /salir --}}
+{{/if}}
+
+{{#unless conocido}}    <!--a menos que -->
+    <p>No te conozco</p>
+    <form action="/ingresar" method="post">  {{!-- post captura el dato --}}
+        <input type="text" name="nombre"><button>ingresar</button>
+    </form>
+{{/unless}}
