@@ -1,2 +1,15 @@
+{{#if activo}}
+<h2>Aún no inicia!</h2>
+<p>Ingrese su nombre para iniciar la sesión</p>
+<form action="/iniciar" method="post">
+    <input type="text" name="nombre"><button>iniciar</button>
+</form>
+{{/if}}
+
+{{#unless activo}} 
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>¿Que color tiene el fondo de ésta página?</p>
+<form action="/ingresar" method="post">
+    <input type="text" name="color"><button>ingresar</button>
+</form>
+{{/unless}}

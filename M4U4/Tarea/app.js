@@ -4,8 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var session = require('express-session');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { resolveAny } = require('dns');
 
 var app = express();
 
@@ -19,16 +22,60 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'Clave de prueba con express session',
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.get('/', function (req, res) {
+  var activo = Boolean(req.session.color);
+
+  res.render('index', {
+    title: 'Tarea en Express.js',
+    activo: activo,
+    color: req.session.color
+  });
+});
+
+app.post('/ingresar', function (req, res) {
+  if (req.body.color) {
+    req.session.color = req.body.color
+  }
+  res.redirect('/');
+});
+
+app.get('/nombre', function (req, res) {
+  var activo = Boolean(req.session.color);
+
+  res.render('nombre', {
+    activo: activo,
+    nombre: req.session.nombre
+  });
+});
+
+app.post('/iniciar', function(req, res){
+  if (req.body.nombre) {
+    req.session.nombre=req.body.nombre
+  }
+  res.redirect('/nombre');
+})
+
+app.get('/finalizar', function (req, res) {
+  req.session.destroy();
+  res.redirect('/');
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
