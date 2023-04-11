@@ -1,0 +1,13 @@
+La sección dinámica de mi sitio va a ser 'Clientes'.
+La tabla la voy a plantear de la siguiente forma:
+
+Nombre de la tabla: Cliente
+Atributos:
+	id_Cliente
+	nomApe
+	userAfip
+	userAnses
+	claveAfip
+	claveAnses
+
+
