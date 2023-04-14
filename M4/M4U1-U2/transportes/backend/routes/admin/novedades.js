@@ -5,7 +5,7 @@ var novedadesModel = require('./../../models/novedadesModel');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  var novedades = novedadesModel.getNovedades();
+  var novedades = await novedadesModel.getNovedades();
   res.render('admin/novedades', {
     layout: 'admin/layout',
     novedades
@@ -21,20 +21,22 @@ router.get('/agregar', (req, res, next) => {
 /*POST home page */
 router.post('/agregar', async (req, res, next) => {
   try {
-    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
-      await novedadesModel.insertNovedad(req.body);
+    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") { //chequear que tenga algo en título, subtítulo o cuerpo.
+      await novedadesModel.insertNovedad(req.body); //le paso los elementos
       res.redirect('/admin/novedades')
     } else {
       res.render('admin/agregar', {
         layout: 'admin/layout',
-        error: true, message: 'Todos los campos son requeridos'
+        error: true, //siempre pasamos el error con un mensaje
+        message: 'Todos los campos son requeridos'
       })
     }
   } catch (error) {
     console.log(error)
     res.render('admin/agregar', {
       layout: 'admin/layout',
-      error: true, message: 'No se cargo la novedad'
+      error: true, 
+      message: 'No se cargo la novedad'
     });
   }
 });

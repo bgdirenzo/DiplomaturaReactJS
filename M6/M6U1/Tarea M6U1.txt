@@ -1,5 +1,5 @@
-La sección dinámica de mi sitio va a ser 'Clientes'.
-La tabla la voy a plantear de la siguiente forma:
+La sección dinámica de mi sitio va a ser la solapa 'Clientes'.
+La tabla la voy a plantear de la siguiente manera:
 
 Nombre de la tabla: Cliente
 Atributos:

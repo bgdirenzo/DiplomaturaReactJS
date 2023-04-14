@@ -7,11 +7,12 @@
             <h3>Listado de Novedades</h3>
         </div>
         <div class="col-5 text-end">
-            <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"> Nuevo</i></a>
+            <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true">
+                    Nuevo</i></a>
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-7 ">
             <table class="table">
                 <thead>
                     <tr class="table-dark">
@@ -21,28 +22,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {{#each novedades}}
                     <tr>
-                        <th scope="row">1</th>
-                        <td>titulo</td>
+                        <th scope="row">{{id_novedad}}</th>
+                        <td>{{titulo}}</td>
                         <td class="text-end">
-                            <a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="btn btn-secondary" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="#" title="editar" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"
+                                    aria-hidden="true"></i></a>
+                            <a href="#" title="eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"
+                                    aria-hidden="true"></i></a>
                         </td>
                     </tr>
+                    {{/each}}
                 </tbody>
             </table>
         </div>
     </div>
-    <tbody>
-        {{#each novedades}}
-        <tr>
-            <th scope="row">{{id}}</th>
-            <td>{{titulo}}</td>
-            <td>
-                <a href="#" title="editar" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
-                <a href="#" title="eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
 </div>
