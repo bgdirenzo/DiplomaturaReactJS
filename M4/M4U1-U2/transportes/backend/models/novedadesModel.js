@@ -1,9 +1,15 @@
-var pool = require('./bd'); 
+var pool = require('./bd');
 
-async function getNovedades() { 
+async function getNovedades() {
     var query = 'select * from novedad';
     var rows = await pool.query(query);
     return rows;
+}
+
+async function getNovedadById(id) {
+    var query = "select * from novedad where id_novedad = ?";
+    var rows = await pool.query(query, [id]);
+    return rows[0];
 }
 
 async function insertNovedad(obj) {
@@ -17,10 +23,20 @@ async function insertNovedad(obj) {
     }
 }
 
+async function modificarNovedadById(obj, id) {
+    try {
+        var query = "update novedad set ? where id_novedad = ?";
+        var rows = await pool.query(query, [obj, id]);
+        return rows;
+    } catch (error) {
+        throw error;
+    }
+}
+
 async function deleteNovedadById(id) {
     var query = "delete from novedad where id_novedad = ? ";
     var rows = await pool.query(query, [id]);
     return rows;
 }
 
-module.exports = { getNovedades, insertNovedad, deleteNovedadById }
+module.exports = { getNovedades, insertNovedad, deleteNovedadById, getNovedadById, modificarNovedadById }

@@ -24,6 +24,15 @@ router.get('/eliminar/:id', async (req, res, next) => {
   res.redirect('/admin/novedades')
 });
 
+router.get('/modificar/:id', async (req, res, next) => {
+  let id = req.params.id;
+  let novedad = await novedadesModel.getNovedadById(id);
+  res.render('admin/modificar', {
+    layout: 'admin/layout',
+    novedad
+  });
+});
+
 /*POST home page */
 router.post('/agregar', async (req, res, next) => {
   try {
@@ -43,6 +52,25 @@ router.post('/agregar', async (req, res, next) => {
       layout: 'admin/layout',
       error: true, 
       message: 'No se cargo la novedad'
+    });
+  }
+});
+
+router.post('/modificar', async (req, res, next) => {
+  try {
+    let obj = {
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo
+    }
+    await novedadesModel.modificarNovedadById(obj, req.body.id);
+    res.redirect('/admin/novedades');
+  } catch (error) {
+    console.log(error)
+    res.render('admin/modificar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'No se modifico la novedad'
     });
   }
 });
