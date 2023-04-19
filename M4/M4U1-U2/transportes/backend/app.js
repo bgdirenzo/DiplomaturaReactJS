@@ -64,9 +64,9 @@ app.use('/admin/novedades', secured, adminRouter);
 // });
 
 //SELECT
-// pool.query('SELECT * FROM novedad').then(function (resultado) {
-//   console.log(resultado)
-// });
+//  pool.query('SELECT * FROM novedad order by id_novedad asc').then(function (resultado) {
+//    console.log(resultado)
+//  });
 
 //DELETE
 //  var id = 5

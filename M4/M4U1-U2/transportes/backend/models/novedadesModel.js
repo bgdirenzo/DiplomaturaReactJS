@@ -1,7 +1,7 @@
 var pool = require('./bd');
 
 async function getNovedades() {
-    var query = 'select * from novedad';
+    var query = 'select * from novedad order by id_novedad asc';
     var rows = await pool.query(query);
     return rows;
 }
