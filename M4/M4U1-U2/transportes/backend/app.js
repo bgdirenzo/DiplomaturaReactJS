@@ -68,6 +68,13 @@ app.use('/admin/novedades', secured, adminRouter);
 //   console.log(resultado)
 // });
 
+//DELETE
+//  var id = 5
+//  pool.query('DELETE FROM novedad WHERE id_novedad = ?', [id]).then(function(resultado){
+//     console.log(resultado)
+// });
+
+
 /*FIN Sección consultas */
 
 // catch 404 and forward to error handler
