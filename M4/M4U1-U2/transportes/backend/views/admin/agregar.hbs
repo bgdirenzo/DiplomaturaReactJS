@@ -3,12 +3,15 @@
         <div class="col-6 offset-3">
             <h4>Agregar una nueva novedad</h4>
             </br>
-            <form action="/admin/novedades/agregar" method="post">
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
                 <div class="mb-3 row">
                     <input type="text" name="titulo" class="form-control" placeholder="Título">
                 </div>
                 <div class="mb-3 row">
                     <textarea type="text" name="subtitulo" class="form-control" placeholder="Subtítulo"></textarea>
+                </div>
+                <div class="mb-3 row">
+                    <label> Imagen: <input type="file" class="form-control" name="imagen" id="imagen"></label>
                 </div>
                 <div class="mb-3 row">
                     <textarea name="cuerpo" type="text" class="from-control" placeholder="Cuerpo"></textarea>
