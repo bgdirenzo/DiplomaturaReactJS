@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/components/pages/contactoPage.css';
+import {useState} from "react";
 
 const ContactoPage = (props) => {
     return (
